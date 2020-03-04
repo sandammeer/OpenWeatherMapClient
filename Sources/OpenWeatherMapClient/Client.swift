@@ -16,7 +16,7 @@ public class OpenWeatherMapClient {
         eventLoopGroupProvider:.shared(MultiThreadedEventLoopGroup(numberOfThreads: System.coreCount))
     )
     
-    public var unit: Unit = .kelvin
+    public var unit: Unit = .fahrenheit
     
     public var languageCode: String = "en"
     
