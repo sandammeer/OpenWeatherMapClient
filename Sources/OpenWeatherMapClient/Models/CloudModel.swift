@@ -9,14 +9,18 @@
 import Foundation
 
 
-public struct CloudModel: Codable {
+public extension OpenWeatherMapClient {
     
-    public let percent: Int
-    
-    enum CodingKeys: String, CodingKey {
+    struct CloudModel: Codable {
         
-        case percent = "all"
+        public let percent: Int
+        
+        enum CodingKeys: String, CodingKey {
+            
+            case percent = "all"
+            
+        }
         
     }
-    
+
 }

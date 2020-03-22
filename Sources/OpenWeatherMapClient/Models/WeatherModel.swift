@@ -9,20 +9,24 @@
 import Foundation
 
 
-public struct WeatherModel: Codable {
+public extension OpenWeatherMapClient {
     
-    public let id: Int
-    public let name: String
-    public let description: String
-    public let iconId: String
-    
-    enum CodingKeys: String, CodingKey {
+    struct WeatherModel: Codable {
         
-        case id
-        case name = "main"
-        case description
-        case iconId = "icon"
+        public let id: Int
+        public let name: String
+        public let description: String
+        public let iconId: String
+        
+        enum CodingKeys: String, CodingKey {
+            
+            case id
+            case name = "main"
+            case description
+            case iconId = "icon"
+            
+        }
         
     }
-    
+
 }

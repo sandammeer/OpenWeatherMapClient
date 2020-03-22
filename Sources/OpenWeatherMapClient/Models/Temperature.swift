@@ -9,4 +9,8 @@
 import Foundation
 
 
-public typealias Temperature = Double
+public extension OpenWeatherMapClient {
+    
+    typealias Temperature = Double
+
+}

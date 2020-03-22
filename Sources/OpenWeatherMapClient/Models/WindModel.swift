@@ -9,16 +9,20 @@
 import Foundation
 
 
-public struct WindModel: Codable {
-    
-    public let speed: Double
-    public let degree: Int
-    
-    enum CodingKeys: String, CodingKey {
+public extension OpenWeatherMapClient {
+
+    struct WindModel: Codable {
         
-        case speed
-        case degree = "deg"
+        public let speed: Double
+        public let degree: Int
+        
+        enum CodingKeys: String, CodingKey {
+            
+            case speed
+            case degree = "deg"
+            
+        }
         
     }
-    
+ 
 }

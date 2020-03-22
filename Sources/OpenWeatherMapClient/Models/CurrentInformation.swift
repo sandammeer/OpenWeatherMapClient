@@ -9,11 +9,15 @@
 import Foundation
 
 
-public struct CurrentInformation: Codable {
-    
-    public let type: Int?
-    public let country: String?
-    public let sunrise: Int?
-    public let sunset: Int?
-    
+public extension OpenWeatherMapClient {
+
+    struct CurrentInformation: Codable {
+        
+        public let type: Int?
+        public let country: String?
+        public let sunrise: Int?
+        public let sunset: Int?
+        
+    }
+
 }

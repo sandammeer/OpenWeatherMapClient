@@ -9,10 +9,14 @@
 import Foundation
 
 
-public enum Unit: String {
+public extension OpenWeatherMapClient {
     
-    case kelvin     = "kelvin"
-    case fahrenheit = "imperial"
-    case celsius    = "metric"
-    
+    enum Unit: String {
+        
+        case kelvin     = "kelvin"
+        case fahrenheit = "imperial"
+        case celsius    = "metric"
+        
+    }
+
 }

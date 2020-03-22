@@ -9,14 +9,18 @@
 import Foundation
 
 
-public struct ForecastListModel: Codable {
+public extension OpenWeatherMapClient {
     
-    public let forecasts: [ForecastModel]
-    
-    enum CodingKeys: String, CodingKey {
+    struct ForecastListModel: Codable {
         
-        case forecasts = "list"
+        public let forecasts: [ForecastModel]
+        
+        enum CodingKeys: String, CodingKey {
+            
+            case forecasts = "list"
+            
+        }
         
     }
-    
+
 }
