@@ -32,5 +32,5 @@ final class OpenWeatherMapClientTests: XCTestCase {
         ("testGetTodaysForecast", testGetTodaysForecast),
         ("testGetWeekForecast", testGetWeekForecast),
     ]
-    
+
 }
