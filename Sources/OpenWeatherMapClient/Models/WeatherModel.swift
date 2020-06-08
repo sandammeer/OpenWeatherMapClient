@@ -49,9 +49,9 @@ public extension OpenWeatherMapClient.WeatherModel {
         case "03d", "03n":   return .scatteredClouds
         case "04d", "04n":   return .brokenClouds
         case "09d", "09n":   return .showerRain
-        case "010d", "010n": return .rain
-        case "011d", "011n": return .thunderstorm
-        case "013d", "013n": return .snow
+        case "10d", "10n":   return .rain
+        case "11d", "11n":   return .thunderstorm
+        case "13d", "13n":   return .snow
         case "50d", "50n":   return .mist
         default: return nil
         }
