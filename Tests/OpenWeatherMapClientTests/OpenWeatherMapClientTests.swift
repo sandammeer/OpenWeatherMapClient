@@ -27,10 +27,20 @@ final class OpenWeatherMapClientTests: XCTestCase {
         XCTAssertNotNil(forecasts)
         XCTAssertEqual(forecasts?.isEmpty, false)
     }
-    
+
+    func testGetIconData() {
+        let client = OpenWeatherMapClient(apiKey: apiKey)
+        let forecast = try? client.currentForecastFor(cityName: "Hamburg").wait()
+        let weatherModel = forecast?.weather?.first
+        XCTAssertNotNil(weatherModel)
+        let iconData = client.getWeatherIconDataFrom(model: weatherModel!)
+        XCTAssertNotNil(iconData)
+    }
+
     static var allTests = [
         ("testGetTodaysForecast", testGetTodaysForecast),
         ("testGetWeekForecast", testGetWeekForecast),
+        ("testGetIconData", testGetIconData)
     ]
 
 }

@@ -26,7 +26,7 @@ public extension OpenWeatherMapClient {
             case iconId = "icon"
             
         }
-        
+
     }
 
 }

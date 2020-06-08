@@ -30,7 +30,13 @@ public extension OpenWeatherMapClient {
             else {
                 throw OpenWeatherMapError.errorParsingBody
             }
-            return try JSONDecoder().decode(ForecastModel.self, from: Data(bytes))
+            do {
+                var forecast = try JSONDecoder().decode(ForecastModel.self, from: Data(bytes))
+                return forecast
+            } catch let error {
+                print(error)
+                throw OpenWeatherMapError.errorParsingBody
+            }
         }
     }
     

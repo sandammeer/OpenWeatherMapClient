@@ -12,9 +12,7 @@ import AsyncHTTPClient
 
 public class OpenWeatherMapClient {
     
-    internal let client = HTTPClient(
-        eventLoopGroupProvider:.shared(MultiThreadedEventLoopGroup(numberOfThreads: System.coreCount))
-    )
+    internal let client = HTTPClient(eventLoopGroupProvider: .shared(MultiThreadedEventLoopGroup(numberOfThreads: System.coreCount)))
     
     public var unit: Unit = .fahrenheit
     

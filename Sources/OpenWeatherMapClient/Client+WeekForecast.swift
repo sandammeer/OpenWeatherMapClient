@@ -38,5 +38,15 @@ public extension OpenWeatherMapClient {
             return []
         }
     }
-    
+
+    func getWeatherIconDataFrom(model: WeatherModel) -> Data? {
+        guard let response = try? client.get(url: model.iconURL).wait(),
+            var body = response.body,
+            let bytes = body.readBytes(length: body.readableBytes)
+        else {
+            return nil
+        }
+        return Data(bytes)
+    }
+
 }

@@ -27,7 +27,7 @@ public extension OpenWeatherMapClient {
         public let cityName: String?
         public let information: CurrentInformation?
         public let weatherInformation: WeatherInformation?
-        
+
         enum CodingKeys: String, CodingKey {
             
             case time = "dt"
@@ -40,7 +40,7 @@ public extension OpenWeatherMapClient {
             case weatherInformation = "main"
             
         }
-        
+
     }
 
 }

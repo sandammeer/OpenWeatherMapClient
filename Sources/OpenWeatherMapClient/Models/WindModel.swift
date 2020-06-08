@@ -14,7 +14,7 @@ public extension OpenWeatherMapClient {
     struct WindModel: Codable {
         
         public let speed: Double
-        public let degree: Int
+        public let degree: Int?
         
         enum CodingKeys: String, CodingKey {
             
