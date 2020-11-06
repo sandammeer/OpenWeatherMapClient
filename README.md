@@ -32,7 +32,7 @@ client.languageCode = "de"
 
 Default is english (**en**)
 
-Language Codes can be found [here](https://openweathermap.org/current) (hint: search for **Multilingual**)
+Language Codes can be found [here](https://openweathermap.org/current#multi)
 
 ## Testing
 
