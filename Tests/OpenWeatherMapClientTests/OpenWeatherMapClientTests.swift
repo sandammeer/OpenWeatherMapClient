@@ -21,7 +21,7 @@ final class OpenWeatherMapClientTests: XCTestCase {
     func testGetWeekForecast() {
         let client = OpenWeatherMapClient(apiKey: apiKey)
         client.unit = .celsius
-        client.languageCode = "en"
+        client.language = .en
         
         let forecasts = try? client.weekForecastFor(cityName: "Hamburg").wait()
         XCTAssertNotNil(forecasts)
